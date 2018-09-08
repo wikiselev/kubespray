@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: cellgeni
+spec:
+  rules:
+  - host: partslab.cellgeni.sanger.ac.uk
+    http: 
+      paths:
+      - backend:
+          serviceName: mprofile-web
+          servicePort: 8000
+  - host: sample-tracker.cellgeni.sanger.ac.uk
+    http:
+        paths:
+        - backend:
+            serviceName: sample-tracker
+            servicePort: 8000
+  - host: jupyter.cellgeni.sanger.ac.uk
+    http:
+        paths:
+        - backend:
+            serviceName: proxy-public
+            servicePort: 80
