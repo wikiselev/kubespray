@@ -26,7 +26,7 @@ flavor_k8s_master = "8003"
 # nodes
 number_of_k8s_nodes = 0
 number_of_k8s_nodes_no_floating_ip = 4
-flavor_k8s_node = "<UUID>"
+flavor_k8s_node = "2002"
 
 # GlusterFS
 # either 0 or more than one
